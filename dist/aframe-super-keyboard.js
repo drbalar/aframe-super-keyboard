@@ -547,14 +547,6 @@ AFRAME.registerComponent('super-keyboard', {
   },
 
   dismiss: function () {
-    this.data.value = this.defaultValue;
-    this.updateTextInput();
-    this.el.object3D.visible = false;
-    if (this.hand && this.hand.ownRaycaster) {
-      this.hand.setAttribute('raycaster', {showLine: false, enabled: false});
-    }
-    this.el.emit('superkeyboarddismiss');
-    this.data.show = false;
   },
 
   blur: function (ev) {
